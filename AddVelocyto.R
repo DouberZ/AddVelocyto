@@ -1,3 +1,14 @@
+###usage
+###merged.velocity <- AddVelocyto(files = c("file1.loom", "file2.loom", "file3.loom", "file4.loom"), object = merged, samples = c("WT_c", "WT_t", "cKO_c", "cKO_t"), cell.ids = c("wc", "cc", "wp", "cp"))
+###merged.velocity <- SCTransform(object = merged.velocity, assay = "spliced")
+##merged.velocity <- RunVelocity(object = merged.velocity, deltaT = 1, kCells = 25, fit.quantile = 0.02)
+###cell.colors <- colors[Idents(object = merged)]
+###names(x = cell.colors) <- colnames(x = merged)
+###show.velocity.on.embedding.cor(emb = Embeddings(object = merged.velocity, reduction = "umap"), vel = Tool(object = merged.velocity, 
+#    slot = "RunVelocity"), n = 200, scale = "sqrt", cell.colors = ac(x = cell.colors, alpha = 0.5), 
+#    cex = 0.8, arrow.scale = 3, show.grid.flow = TRUE, min.grid.cell.mass = 0.5, grid.n = 40, arrow.lwd = 1, 
+#    do.par = FALSE, cell.border.alpha = 0.1)
+
 AddVelocyto <- function(
   files, 
   object = object,
