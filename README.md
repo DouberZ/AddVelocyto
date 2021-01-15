@@ -14,7 +14,9 @@ merged.velocity <- AddVelocity(files = c("sample1.loom", "sample2.loom", "sample
                                 samples = samples, 
                                 cells = colnames(merged) , 
                                 cell.ids = unique(substr(Cells(merged), 18, 20)))
+
 merged.velocity@reductions <- merged@reductions
+
 merged.velocity@meta.data <- merged@meta.data
 
 seurat2anndata(obj = merged.velocity, outFile = "merged_velocity.h5ad")
