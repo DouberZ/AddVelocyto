@@ -9,7 +9,7 @@ Merge Velocyto Loom into one
 
 #input should be ordered properly
 
-merged.velocity <- AddVelocity(files = c("sample1.loom", "sample2.loom", "sample3"), 
+merged.velocity <- AddVelocity(files = c("sample1.loom", "sample2.loom", "sample3.loom"), 
                                 object = merged, 
                                 samples = samples, 
                                 cells = colnames(merged) , 
